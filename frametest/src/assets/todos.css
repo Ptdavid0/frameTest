@@ -1,10 +1,27 @@
+.todoContainer{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  flex:1 ;
+  flex-wrap: wrap;
+}
+
+.btnContainer{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex:1 ;
+  flex-wrap: wrap;
+}
+
 .cards {
-  background-color: white;
+  background-color: darkslategray;
+  color: white;
   border-radius: 4px;
-  margin-top: 8px;
-  margin-bottom: 5px;
+  margin: 1vw;
   padding: 25px 25px 15px 25px;
   transition: 0.3s;
+  width: 10%;
 }
 .cards:hover {
   box-shadow: 5px 1px 20px 1px #ddd;
@@ -14,10 +31,11 @@
 .cards_done {
   background-color: lawngreen;
   border-radius: 4px;
-  margin-top: 8px;
-  margin-bottom: 5px;
+  margin: 1vw;
   padding: 25px 25px 15px 25px;
   transition: 0.3s;
+  width: 25%;
+  height: 20vh;
 }
 .cards_done:hover {
   box-shadow: 5px 1px 20px 1px #ddd;
@@ -26,10 +44,12 @@
 .cards_notDone {
   background-color: orangered;
   border-radius: 4px;
-  margin-top: 8px;
-  margin-bottom: 5px;
+  margin: 1vw;
   padding: 25px 25px 15px 25px;
   transition: 0.3s;
+  width: 25%;
+  height: 20vh;
+  box-sizing: border-box;
 }
 .cards_notDone:hover {
   box-shadow: 5px 1px 20px 1px #ddd;
