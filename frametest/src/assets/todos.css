@@ -1,0 +1,37 @@
+.cards {
+  background-color: white;
+  border-radius: 4px;
+  margin-top: 8px;
+  margin-bottom: 5px;
+  padding: 25px 25px 15px 25px;
+  transition: 0.3s;
+}
+.cards:hover {
+  box-shadow: 5px 1px 20px 1px #ddd;
+  transform: scale(0.96);
+}
+
+.cards_done {
+  background-color: lawngreen;
+  border-radius: 4px;
+  margin-top: 8px;
+  margin-bottom: 5px;
+  padding: 25px 25px 15px 25px;
+  transition: 0.3s;
+}
+.cards_done:hover {
+  box-shadow: 5px 1px 20px 1px #ddd;
+  transform: scale(0.96);
+}
+.cards_notDone {
+  background-color: orangered;
+  border-radius: 4px;
+  margin-top: 8px;
+  margin-bottom: 5px;
+  padding: 25px 25px 15px 25px;
+  transition: 0.3s;
+}
+.cards_notDone:hover {
+  box-shadow: 5px 1px 20px 1px #ddd;
+  transform: scale(0.96);
+}
