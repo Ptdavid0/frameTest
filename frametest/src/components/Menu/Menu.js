@@ -4,12 +4,12 @@ import { FaNewspaper, FaList, FaImages } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import Logo from "../../assets/framework-icon-150x150.png";
 
-export default function Menu(props) {
+export default function Menu() {
   return (
     <>
       <div className="menuContainer">
         <div className="upperDiv">
-          <img src={Logo} alt="" />
+          <img src={Logo} alt="Logo" />
           <p>Framebook</p>
         </div>
         <div className="btnContainer">
@@ -19,12 +19,12 @@ export default function Menu(props) {
           </Link>
 
           <Link to="/albums" className="divMenu">
-            <FaImages size="10vh" color="black" />
+            <FaImages size="10vh" />
             <h2>ALBUMS</h2>
           </Link>
 
           <Link to="/todos" className="divMenu">
-            <FaList size="10vh" color="black" />
+            <FaList size="10vh" />
             <h2>TO-DO LIST</h2>
           </Link>
         </div>

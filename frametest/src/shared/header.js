@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-export default function Header(props) {
+export default function Header() {
   return (
     <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
       <button
@@ -23,13 +23,19 @@ export default function Header(props) {
             </Link>
           </li>
           <li className="nav-item">
-            <Link to="/posts" className="nav-link">Posts</Link>
+            <Link to="/posts" className="nav-link">
+              Posts
+            </Link>
           </li>
           <li className="nav-item">
-            <Link to="/albums" className="nav-link">Albums</Link>
+            <Link to="/albums" className="nav-link">
+              Albums
+            </Link>
           </li>
           <li className="nav-item">
-            <Link to="/todos" className="nav-link">To-Do</Link>
+            <Link to="/todos" className="nav-link">
+              To-Do
+            </Link>
           </li>
         </ul>
       </div>

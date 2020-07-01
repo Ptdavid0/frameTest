@@ -1,24 +1,17 @@
 import React, { useState, useEffect } from "react";
-import api from "../../services/api"
+import api from "../../services/api";
 import "./styles.css";
-import Paginator from 'react-hooks-paginator';
+import Paginator from "react-hooks-paginator";
 import Header from "../../shared/header";
 
-
-export default function Todos(props) {
-
-
+export default function Todos() {
   const [todos, setTodos] = useState([]);
   const [allTodos, setAllTodos] = useState([]);
-  const [filteredItems,setFilteredItems] = useState([]);
-
+  const [filteredItems, setFilteredItems] = useState([]);
   const [searchTerm, setSearchTerm] = useState("");
-  // const [searchResults, setSearchResults] = useState([]);
-
   const pageLimit = 9;
   const [offset, setOffset] = useState(0);
   const [currentPage, setCurrentPage] = useState(1);
-  // const [slicedItems,setFilteredItems] = useState([]);
 
   //API request for all to-dos
   useEffect(() => {
@@ -27,26 +20,26 @@ export default function Todos(props) {
     });
   }, []);
 
-  //Slice the array for pagination 
+  //Slice the array for pagination
   useEffect(() => {
     setTodos(allTodos.slice(offset, offset + pageLimit));
-  }, [offset,allTodos]);
-  
+  }, [offset, allTodos]);
+
   //Input filter
   useEffect(() => {
-    const results = allTodos.filter(todo =>
+    const results = allTodos.filter((todo) =>
       todo.title.toLowerCase().includes(searchTerm.toLowerCase())
     );
-    setTodos(results.slice(offset, offset + pageLimit));
-  }, [searchTerm,allTodos]);
+    setTodos(results);
+    // eslint-disable-next-line
+  }, [searchTerm]);
 
   //Handle input Change
   function handleChange(event) {
     setSearchTerm(event.target.value);
   }
 
-  
-  //Select which className will be used
+  //Return the className that will be used
   function getClass(stateOfItem) {
     if (stateOfItem) {
       return "cards_done";
@@ -54,21 +47,24 @@ export default function Todos(props) {
       return "cards_notDone";
     }
   }
-  
+
   //Buttons filter
-  function filterTodoItems(typeOfFilter) {
-    if (typeOfFilter === "Done") {
-      setFilteredItems(allTodos.filter((item) => item.completed === true));
-      setTodos(filteredItems.slice(offset, offset + pageLimit));
-    }else if(typeOfFilter === "notDone"){
-      setFilteredItems(allTodos.filter((item) => item.completed === false));
-      setTodos(filteredItems.slice(offset, offset + pageLimit));
-    }else{
-      setTodos(allTodos.slice(offset, offset + pageLimit));
-    }
+  function filterDone() {
+    setFilteredItems(allTodos.filter((item) => item.completed));
   }
 
+  function filterNotDone() {
+    setFilteredItems(allTodos.filter((item) => !item.completed));
+  }
 
+  function filterAll() {
+    setFilteredItems(allTodos.slice(offset, offset + pageLimit));
+    setCurrentPage(1);
+  }
+
+  useEffect(() => {
+    setTodos(filteredItems);
+  }, [filteredItems]);
 
   return (
     <>
@@ -76,23 +72,23 @@ export default function Todos(props) {
       <br />
       <h1>To-Do List</h1>
       <div className="btnContainer">
-        <button className="btn" onClick={() => filterTodoItems("all")}>
+        <button className="btn" onClick={filterAll}>
           All
         </button>
-        <button className="btn" onClick={() => filterTodoItems("notDone")}>
-          Not Completed
+        <button className="btn" onClick={filterNotDone}>
+          Not done
         </button>
-        <button className="btn" onClick={() => filterTodoItems("Done")}>
+        <button className="btn" onClick={filterDone}>
           Done
         </button>
 
         <input
-        className="inputFilter"
-        type="text"
-        placeholder="Search"
-        value={searchTerm}
-        onChange={handleChange}
-      />
+          className="inputFilter"
+          type="text"
+          placeholder="Search"
+          value={searchTerm}
+          onChange={handleChange}
+        />
       </div>
       <hr />
       <div className="todoContainer">

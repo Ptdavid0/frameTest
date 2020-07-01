@@ -1,28 +1,25 @@
-.todoContainer{
-  display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
-  flex:1 ;
-  flex-wrap: wrap;
-}
-
-.btnContainer{
+.btnContainer {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  flex:1 ;
+  flex: 1;
+  flex-wrap: wrap;
+}
+.todoContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  flex: 1;
   flex-wrap: wrap;
 }
 
 .btn {
-  background-color: darkslategray;
-  color: white;
-  border-radius: 4px;
   margin: 1vw;
-  padding: 25px 25px 15px 25px;
   transition: 0.3s;
   width: 10%;
+  border: 1px solid black !important;
 }
+
 .btn:hover {
   box-shadow: 5px 1px 20px 1px #ddd;
   transform: scale(0.96);
@@ -36,15 +33,17 @@
   transition: 0.3s;
   width: 25%;
   height: 20vh;
-  overflow: auto
+  overflow: auto;
+  box-shadow: 5px 5px 30px 7px rgba(0, 0, 0, 0.1),
+    -5px -5px 30px 7px rgba(0, 0, 0, 0.1);
 }
 .cards_done:hover {
   box-shadow: 5px 1px 20px 1px #ddd;
   transform: scale(0.96);
 }
 .cards_notDone {
-  background-color: #FF6666;
-  border: 3px solid #FF6666;
+  background-color: #ff6666;
+  border: 3px solid #ff6666;
   border-radius: 4px;
   margin: 1vw;
   padding: 25px 25px 15px 25px;
@@ -52,17 +51,15 @@
   width: 25%;
   height: 20vh;
   box-sizing: border-box;
-  overflow: auto
+  overflow: auto;
+  box-shadow: 5px 5px 30px 7px rgba(0, 0, 0, 0.1),
+    -5px -5px 30px 7px rgba(0, 0, 0, 0.1);
 }
 .cards_notDone:hover {
   box-shadow: 5px 1px 20px 1px #ddd;
   transform: scale(0.96);
 }
 
-.btn{
-  border: 1px solid black !important;
-}
-
-.inputFilter{
+.inputFilter {
   padding: 5px;
 }

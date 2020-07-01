@@ -29,13 +29,13 @@
   justify-content: center;
 }
 
-.menuContainer  a{ 
+.menuContainer a {
   color: black;
   font-style: none;
   text-decoration: none;
 }
 
-.menuContainer  a:hover{ 
+.menuContainer a:hover {
   color: black;
   font-style: none;
   text-decoration: none;
@@ -84,5 +84,3 @@
   font-family: "Roboto Mono", monospace;
   font-weight: bold;
 }
-
-
