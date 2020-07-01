@@ -27,6 +27,7 @@
 {
   height:30em;
   width:25em;
+  border-radius: 4px;
   margin: 1vw;
   display:-webkit-box;
   display:-ms-flexbox;
