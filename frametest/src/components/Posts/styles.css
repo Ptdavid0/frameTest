@@ -6,7 +6,7 @@
   flex-wrap: wrap;
 }
 
-.cards {
+/* .cards {
   background-color: gold;
   color: white;
   border-radius: 4px;
@@ -19,33 +19,7 @@
 .cards:hover {
   box-shadow: 5px 1px 20px 1px #ddd;
   transform: scale(0.96);
-}
-
-body
-{
-  background-color:#f2f2f2;
-  font-family: 'RobotoDraft', 'Roboto', sans-serif;
-  -webkit-font-smoothing: antialiased;
-}
-
-*
-{
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-}
-
-h5
-{
-  margin:0px;
-  font-size:1.4em;
-  font-weight:700;
-}
-
-p
-{
-  font-size:12px;
-}
-
+} */
 
 /* End Non-Essential  */
 
@@ -60,7 +34,6 @@ p
   flex-direction:column;
   position:relative;
   transition:all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
-  border-radius:16px;
   overflow:hidden;
   box-shadow:  15px 15px 27px #e1e1e3, -15px -15px 27px #ffffff;
   -webkit-box-orient:vertical;

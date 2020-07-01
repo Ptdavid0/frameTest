@@ -36,13 +36,15 @@
   transition: 0.3s;
   width: 25%;
   height: 20vh;
+  overflow: auto
 }
 .cards_done:hover {
   box-shadow: 5px 1px 20px 1px #ddd;
   transform: scale(0.96);
 }
 .cards_notDone {
-  background-color: orangered;
+  background-color: #FF6666;
+  border: 3px solid #FF6666;
   border-radius: 4px;
   margin: 1vw;
   padding: 25px 25px 15px 25px;
@@ -50,12 +52,17 @@
   width: 25%;
   height: 20vh;
   box-sizing: border-box;
+  overflow: auto
 }
 .cards_notDone:hover {
   box-shadow: 5px 1px 20px 1px #ddd;
   transform: scale(0.96);
 }
 
-.inputFilter{
+.btn{
+  border: 1px solid black !important;
+}
 
+.inputFilter{
+  padding: 5px;
 }

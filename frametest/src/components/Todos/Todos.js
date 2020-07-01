@@ -18,6 +18,7 @@ export default function Todos(props) {
   const pageLimit = 9;
   const [offset, setOffset] = useState(0);
   const [currentPage, setCurrentPage] = useState(1);
+  // const [slicedItems,setFilteredItems] = useState([]);
 
   //API request for all to-dos
   useEffect(() => {
@@ -36,7 +37,7 @@ export default function Todos(props) {
     const results = allTodos.filter(todo =>
       todo.title.toLowerCase().includes(searchTerm.toLowerCase())
     );
-    setTodos(results);
+    setTodos(results.slice(offset, offset + pageLimit));
   }, [searchTerm,allTodos]);
 
   //Handle input Change
