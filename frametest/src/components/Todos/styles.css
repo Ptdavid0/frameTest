@@ -14,7 +14,7 @@
   flex-wrap: wrap;
 }
 
-.cards {
+.btn {
   background-color: darkslategray;
   color: white;
   border-radius: 4px;
@@ -23,7 +23,7 @@
   transition: 0.3s;
   width: 10%;
 }
-.cards:hover {
+.btn:hover {
   box-shadow: 5px 1px 20px 1px #ddd;
   transform: scale(0.96);
 }
@@ -54,4 +54,8 @@
 .cards_notDone:hover {
   box-shadow: 5px 1px 20px 1px #ddd;
   transform: scale(0.96);
+}
+
+.inputFilter{
+
 }

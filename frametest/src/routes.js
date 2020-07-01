@@ -1,9 +1,9 @@
 import React from "react"
 import { Switch , Route }  from "react-router-dom"
-import Menu from "./components/Menu"
-import Albums from "./components/Albums"
-import Posts from "./components/Posts"
-import Todos from "./components/Todos"
+import Menu from "./components/Menu/Menu"
+import Albums from "./components/Album/Albums"
+import Posts from "./components/Posts/Posts"
+import Todos from "./components/Todos/Todos"
 
 const Routes = () =>(
   

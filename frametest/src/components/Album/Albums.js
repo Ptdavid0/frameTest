@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from "react"
-import api from "../services/api"
+import api from "../../services/api"
+import "./styles.css";
+import Header from "../../shared/header";
 
 export default function Albums(props) {
 
@@ -14,6 +16,7 @@ export default function Albums(props) {
 
   return(
     <>
+    <Header />
     <h1>Albums</h1>
     {albums.map(album =><h2>{album.title}</h2>)}
     </>
