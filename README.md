@@ -1,1 +1,1 @@
-# Test for being addimited at Framework 
+# Test performed for entry into the company Framework
